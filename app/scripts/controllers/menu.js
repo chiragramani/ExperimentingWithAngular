@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @ngdoc function
@@ -7,10 +7,11 @@
  * # MenuCtrl
  * Controller of the udaciMealsApp
  */
-angular.module('udaciMealsApp')
-  .controller('MenuCtrl', function () {
-    this.id = 'strawberry-pudding';
-    this.name = 'Strawberry Pudding';
-    this.img = 'strawberry-pudding.jpg';
+angular
+  .module("udaciMealsApp")
+  .controller("MenuCtrl", ["foodFinder", function() {
+    this.id = "strawberry-pudding";
+    this.name = "Strawberry Pudding";
+    this.img = "strawberry-pudding.jpg";
     this.rating = 5;
   });
