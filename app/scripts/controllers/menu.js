@@ -9,7 +9,11 @@
  */
 angular
   .module("udaciMealsApp")
-  .controller("MenuCtrl", ["foodFinder", function() {
+  .controller("MenuCtrl", ["foodFinder", function(menuService) {
+    var viewModel = this;
+    menuService
+    .getData()
+    .then(data => viewModel = data;);
     this.id = "strawberry-pudding";
     this.name = "Strawberry Pudding";
     this.img = "strawberry-pudding.jpg";
